@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'war'
 }
 
 group 'org.example'
@@ -7,13 +8,15 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
-    maven {url "https//:jitpack.io"}
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
-    implementation 'com.github.PeadarODonnell:CT417_Assignment1_PartA:20fad413ba'
+    implementation group: 'org.terasoluna.gfw', name: 'terasoluna-gfw-jodatime', version: '5.7.0.RELEASE'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation 'com.github.TadhgCodyre:CT417-Assignment-1:1.44'
+    //implementation 'com.github.PeadarODonnell:software_engineering_project_1_peadar_o_donnell:1.0'
 }
 
 test {
